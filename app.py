@@ -8,10 +8,10 @@ st.write(
     "Ciao! Sono Atlas. Chiedimi qualsiasi cosa su analisi di mercato, testi o automazione."
 )
 
-# INCOLLA QUI LA TUA CHIAVE API DI GROQ TRA LE VIRGOLETTE
+# Chiave API di Groq integrata
 MIA_CHIAVE = "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"
 
-if MIA_CHIAVE == "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":
+if MIA_CHIAVE == "INCOLLA_QUI_LA_TUA_CHIAVE_SE_VUOI" or not MIA_CHIAVE:
     st.error(
         "⚠️ Inserisci la tua chiave API di Groq dentro il file app.py alla riga 10!"
     )
@@ -34,7 +34,7 @@ else:
                             },
                             {"role": "user", "content": user_input},
                         ],
-                        model="llama-3.1-8b-instant",  # <--- Modificato qui con il modello stabile
+                        model="llama-3.1-8b-instant",
                     )
                     risposta = chat_completion.choices[0].message.content
                     st.success("Risposta di Atlas:")
