@@ -31,7 +31,7 @@ try:
                 },
                 {"role": "user", "content": user_input},
             ],
-            model="llama-3.1-8b-instant",  # Modello standard Groq
+            model="llama-3.1-8b-instant",
         )
         risposta = chat_completion.choices[0].message.content
         st.success("Risposta di Atlas:")
